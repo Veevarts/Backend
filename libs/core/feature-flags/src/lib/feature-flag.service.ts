@@ -8,14 +8,14 @@ export class FeatureFlagService implements OnModuleInit {
 
   async onModuleInit() {
     this.unleash = initialize({
-        url: 'http://localhost:4242/api/',
+        url: process.env['UNLEASH_API_URL'] as string,
         appName: 'unleash-onboarding-node',
         customHeaders: {
-            Authorization: 'default:development.unleash-insecure-api-token' // in production use environment variable
+            Authorization: process.env['UNLEASH_CLIENT_TOKEN'] as string // in production use environment variable
         }
     });
 
-    this.unleash.on('ready', () => console.log('Unleash client ready', process.env['UNLEASH_URL'], process.env['UNLEASH_INSTANCE_ID']));
+    this.unleash.on('ready', () => console.log('Unleash client ready'));
     this.unleash.on('error', (err) => console.error('Unleash error', err));
   }
 
