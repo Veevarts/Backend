@@ -1,0 +1,9 @@
+{
+  "name": "tickets",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ticketing/tickets/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project tickets --web",
+  "targets": {}
+}
