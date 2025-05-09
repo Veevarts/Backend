@@ -1,9 +1,0 @@
-{
-  "name": "offers",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/ticketing/offers/src",
-  "projectType": "library",
-  "tags": [],
-  "// targets": "to see all targets run: nx show project offers --web",
-  "targets": {}
-}
