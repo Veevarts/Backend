@@ -1,11 +1,12 @@
 import { MiddlewareConsumer, Module } from '@nestjs/common';
 import { AppController } from './app.controller';
+import { TicketingApiModule } from '@cinema/ticketing-api';
 import { AppService } from './app.service';
 
 import { ClientIdMiddleware } from '@backend/middleware';
 
 @Module({
-  imports: [],
+  imports: [TicketingApiModule],
   controllers: [AppController],
   providers: [AppService],
 })

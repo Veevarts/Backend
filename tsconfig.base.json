@@ -15,11 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@backend/contacts": ["libs/fundraising/contacts/src/index.ts"],
       "@backend/feature-flags": ["libs/core/feature-flags/src/index.ts"],
       "@backend/middleware": ["libs/core/middleware/src/index.ts"],
-      "@backend/offers": ["libs/ticketing/offers/src/index.ts"],
-      "@backend/tickets": ["libs/ticketing/tickets/src/index.ts"]
+      "@backend/plugins": ["plugins/src/index.ts"],
+      "@cinema/ticketing-api": ["libs/ticketing-api/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
