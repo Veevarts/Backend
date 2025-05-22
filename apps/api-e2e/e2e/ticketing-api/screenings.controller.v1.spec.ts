@@ -17,3 +17,17 @@ test('GET /api/v1/screenings/:id', async ({ request }) => {
   expect(responseBody).toBeDefined();
   expect(responseBody.id).toBe('1');
 });
+
+test('POST /api/v1/screenings/reserve', async ({ request }) => {
+  const response = await request.post('api/v1/screenings/reserve', {
+    data: {
+      screeningId: '1',
+      seats: ['A1', 'A2'],
+    },
+  });
+  expect(response.status()).toBe(201);
+
+  const responseBody = await response.json();
+  expect(responseBody).toBeDefined();
+  expect(Array.isArray(responseBody.reserved)).toBe(true);
+});

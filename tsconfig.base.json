@@ -18,6 +18,8 @@
       "@backend/feature-flags": ["libs/core/feature-flags/src/index.ts"],
       "@backend/middleware": ["libs/core/middleware/src/index.ts"],
       "@backend/plugins": ["plugins/src/index.ts"],
+      "@cinema/contacts-api": ["libs/contacts-api/src/index.ts"],
+      "@cinema/payment-api": ["libs/payment-api/src/index.ts"],
       "@cinema/ticketing-api": ["libs/ticketing-api/src/index.ts"]
     }
   },

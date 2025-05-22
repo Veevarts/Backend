@@ -38,12 +38,12 @@ export default async function (tree: Tree, options: ApiLibsGeneratorSchema) {
   });
 
   // 3. Escribir módulo y controlador básicos
-  const moduleFile = `${libPath}/${libName}.module.ts`;
+  const moduleFile = `${libPath}/lib/${libName}.module.ts`;
   const controllerFile = `${libPath}/controllers/v1/hello.controller.ts`;
 
   tree.write(moduleFile, `
 import { Module } from '@nestjs/common';
-import { HelloController } from './controllers/v1/hello.controller';
+import { HelloController } from '../controllers/v1/hello.controller';
 
 @Module({
   controllers: [HelloController],
