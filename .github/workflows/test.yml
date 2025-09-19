@@ -1,0 +1,16 @@
+name: Test
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout código
+      uses: actions/checkout@v4
+      
+    - name: Placeholder para tests
+      run: echo "Workflow de tests ejecutándose - sin acciones configuradas aún"

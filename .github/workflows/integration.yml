@@ -1,0 +1,16 @@
+name: Integration
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout código
+      uses: actions/checkout@v4
+      
+    - name: Placeholder para integration
+      run: echo "Workflow de integration ejecutándose - sin acciones configuradas aún"

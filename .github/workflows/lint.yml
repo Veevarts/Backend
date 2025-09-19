@@ -1,0 +1,16 @@
+name: Lint
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout código
+      uses: actions/checkout@v4
+      
+    - name: Placeholder para lint
+      run: echo "Workflow de lint ejecutándose - sin acciones configuradas aún"
