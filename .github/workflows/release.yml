@@ -1,0 +1,31 @@
+name: Release manager
+
+on:
+  push:
+    branches:
+      - main
+      - stable
+      - beta-*
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: "Dry run"
+        required: false
+        default: false
+        type: boolean
+      ci:
+        description: "CI"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    name: Release
+    uses: Veevarts/VeevartMultiActions/.github/workflows/semantic-release.yml@reply-release-manaeger-TAMER-19
+    with:
+      dry-run: ${{ inputs.dry-run == true }}
+      ci: ${{ inputs.ci == true }}
