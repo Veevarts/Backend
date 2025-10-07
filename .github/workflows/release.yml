@@ -19,17 +19,13 @@ on:
         default: false
         type: boolean
 
-permissions:
-  contents: write
-  issues: write
-  pull-requests: write
-  id-token: write
-
 jobs:
   release:
     name: Release
+    permissions:
+      contents: read
     uses: Veevarts/VeevartMultiActions/.github/workflows/semantic-release.yml@reply-release-manaeger-TAMER-19
     with:
-      dry-run: ${{ inputs.dry-run == true }}
-      ci: ${{ inputs.ci == true }}
+      dry-run: ${{ inputs.dry-run }}
+      ci: ${{ inputs.ci }}
     secrets: inherit
