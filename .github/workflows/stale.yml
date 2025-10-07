@@ -37,3 +37,4 @@ jobs:
           exempt-issue-labels: 'do-not-close,epic,blocked'
           exempt-pr-labels: 'do-not-close,epic,blocked'
           operations-per-run: 30
+          exempt-draft-pr: true
