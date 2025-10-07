@@ -20,7 +20,10 @@ on:
         type: boolean
 
 permissions:
-  contents: read
+  contents: write
+  issues: write
+  pull-requests: write
+  id-token: write
 
 jobs:
   release:
@@ -29,3 +32,4 @@ jobs:
     with:
       dry-run: ${{ inputs.dry-run == true }}
       ci: ${{ inputs.ci == true }}
+    secrets: inherit
