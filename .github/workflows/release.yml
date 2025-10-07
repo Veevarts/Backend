@@ -1,4 +1,4 @@
-name: Release manager
+name: Semantic Release
 
 on:
   push:
@@ -13,19 +13,13 @@ on:
         required: false
         default: false
         type: boolean
-      ci:
-        description: "CI"
-        required: false
-        default: false
-        type: boolean
 
 jobs:
-  release:
-    name: Release
+  semantic-release:
+    name: Semantic Release
     permissions:
       contents: read
     uses: Veevarts/VeevartMultiActions/.github/workflows/semantic-release.yml@reply-release-manaeger-TAMER-19
     with:
       dry-run: ${{ inputs.dry-run }}
-      ci: ${{ inputs.ci }}
     secrets: inherit
