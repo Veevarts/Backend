@@ -18,7 +18,7 @@ jobs:
   semantic-release:
     name: Semantic Release
     permissions:
-      contents: read
+      contents: write
     uses: Veevarts/VeevartMultiActions/.github/workflows/semantic-release.yml@reply-release-manaeger-TAMER-19
     with:
       dry-run: ${{ inputs.dry-run }}
