@@ -19,7 +19,7 @@ jobs:
     name: Semantic Release
     permissions:
       contents: write
-    uses: Veevarts/VeevartMultiActions/.github/workflows/semantic-release.yml@reply-release-manaeger-TAMER-19
+    uses: Veevarts/VeevartMultiActions/.github/workflows/semantic-release.yml@repication-release-manaeger-TAMER-19
     with:
       dry-run: ${{ inputs.dry-run || false }}
     secrets: inherit
