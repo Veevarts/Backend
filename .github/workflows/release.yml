@@ -3,9 +3,8 @@ name: Semantic Release
 on:
   push:
     branches:
-      - main
       - stable
-      - beta-*
+      - stage
   workflow_dispatch:
     inputs:
       dry-run:
