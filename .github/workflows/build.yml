@@ -1,16 +1,13 @@
 name: Build
 
 on:
-  pull_request:
-    branches: [ main ]
+  push:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Checkout código
-      uses: actions/checkout@v4
-      
-    - name: Placeholder para build
-      run: echo "Workflow de build ejecutándose - sin acciones configuradas aún"
+      - name: Build step
+        run: echo "Running build..."
