@@ -1,13 +1,22 @@
-name: Lint
+name: 'Lint'
 
 on:
-  push:
+  pull_request_target:
     branches:
       - main
+      - story/*
+      - bug/*
+      - hotfix/*
+    types:
+      - opened
+      - edited
+      - reopened
+
+permissions:
+  pull-requests: write
 
 jobs:
   lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Lint step
-        run: echo "Running lint..."
+    name: Lint PR
+    uses: Veevarts/VeevartMultiActions/.github/workflows/lint.yml@feat/add-lint-pr-TAMERS-17
+    secrets: inherit
