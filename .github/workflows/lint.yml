@@ -17,6 +17,6 @@ permissions:
 
 jobs:
   lint:
-    name: Lint PR
+    name: Lint Branch Strategy
     uses: Veevarts/VeevartMultiActions/.github/workflows/lint.yml@feat/add-lint-pr-TAMERS-17
     secrets: inherit
